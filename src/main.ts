@@ -8,6 +8,8 @@ async function main() {
         const sendChannel = process.env.CHANNEL_NAME ? process.env.CHANNEL_NAME : ""
         const sendTopic = process.env.CHANNEL_TOPIC ? process.env.CHANNEL_TOPIC : ""
         const messageToSend = process.env.MESSAGE ? process.env.MESSAGE : ""
+        console.log(`sending message to channel ${sendChannel} and topic ${sendTopic}`)
+        console.log(`logging in with user ${username}`)
         await bot.init(username, paperkey, { verbose: false })
         console.log(`Your bot is initialized. It is logged in as ${bot.myInfo()?.username}`)
 
@@ -15,14 +17,16 @@ async function main() {
         const message = {
             body: messageToSend,
         }
-        console.log(`sending message to channel ${sendChannel} and topic ${sendTopic}`)
+        
         await bot.chat.send(channel, message)
-        console.log('Message sent!')
+        console.log('Message sent!');
+        bot.deinit()
+        process.exit(0)
     } catch (error) {
         console.error(error)
-    } finally {
-        await bot.deinit()
-    }
+        bot.deinit();
+        process.exit(1)
+    } 
 }
 
 async function shutDown() {
