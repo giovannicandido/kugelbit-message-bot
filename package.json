@@ -1,0 +1,22 @@
+{
+  "name": "kubelbit-bot",
+  "version": "1.0.0",
+  "description": "A bot to send status messages to keybase channel",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx tsc"
+  },
+  "keywords": [
+    "bot",
+    "keybase"
+  ],
+  "author": "Giovanni Silva",
+  "license": "ISC",
+  "dependencies": {
+    "keybase-bot": "^3.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "typescript": "^4.2.2"
+  }
+}
