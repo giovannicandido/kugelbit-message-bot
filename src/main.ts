@@ -3,8 +3,8 @@ import Bot = require("keybase-bot");
 const bot = new Bot()
 async function main() {
     try {
-        const username = process.env.KB_USERNAME
-        const paperkey = process.env.KB_PAPERKEY
+        const username = process.env.KEYBASE_USERNAME
+        const paperkey = process.env.KEYBASE_PAPERKEY
         const sendChannel = process.env.CHANNEL_NAME
         const sendTopic = process.env.CHANNEL_TOPIC
         const messageToSend = process.env.MESSAGE

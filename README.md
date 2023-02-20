@@ -11,7 +11,7 @@ keybase --standalone --home=/tmp/bot bot signup -u bot_name_here -t $(cat /tmp/b
 ```
 
 ```
-docker run --rm -it -e KB_USERNAME=bot_username -e KB_PAPERKEY="$(cat paper-key)" -e CHANNEL_NAME="team" -e CHANNEL_TOPIC=buildstatus -e MESSAGE="this is another test message sended from bot" ghcr.io/giovannicandio/kugelbit-message-bot
+docker run --rm -it -e KEYBASE_USERNAME=bot_username -e KEYBASE_PAPERKEY="$(cat paper-key)" -e CHANNEL_NAME="team" -e CHANNEL_TOPIC=buildstatus -e MESSAGE="this is another test message sended from bot" ghcr.io/giovannicandio/kugelbit-message-bot
 ```
 
 
