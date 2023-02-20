@@ -16,4 +16,6 @@ RUN npm run compile
 
 RUN chown keybase /app*
 
+USER keybase
+
 CMD ["node", "/app/out/main.js"]
